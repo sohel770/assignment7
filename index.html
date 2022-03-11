@@ -77,6 +77,41 @@
                 <h1>Reported posts</h1>
             </div>
         </main>
+
+
+
+
+<section>
+    <h2>Bonus Part</h2>
+<div>
+    
+    <h3>Event Loop</h3>
+    <p>ইভেনট লুপের প্রথম কাজ হছে কল সটাক ভেতর একটার পরে একটা ডাটা থাকে। যে ডেটা সবার লাস্টতে থাকে সে সবার আগে execute হয়।
+        একদম প্রথমে একটা মেইন  ফাংশন চালু হয়ে। যখন কোনো ফাংশন কল হয় তখন সে কল সটক উঠে দেয়। তারপর সে ফাংশন ভিতর কোড execute করে কনসোল লক দেখবে। আবার যদি settime function পায় এটা asny ফাংনশন এটা টাইমার চালু হয়। তখন তাকে web api কাছে জমা রেখে আসে call Stack
+        তাকে সাথে সাথে  execute করতে পারে না। এবং পরের কোড থাকলে সেখানে চলে যায়। javascript  হলো  single thread language.  Javascript call stack একটা করে execute করে।সে এক সাথে একটাই কাজ করতে পারে। সবার শেষে যে web api কাছে যে কোড জামা রেখেছিলো সে তো কিছু জানান দিবে কার কাছে সেটা হলো callback queue 
+        web api তার টাইমার শেষ হলে সে  callback queue এর ভিতর চলে আসে। যে সবার আগে আসবে সে সবার আগে যাবে তাকে তো  call stack কে উঠে হবে। উঠাবে কে সেটা হলো Event Loop। Event Loop দুইটা জিনিসের উপর নজর রাখে সেটা হলো  call stack এবং callback queue।
+        </p>
+</div>
+
+
+
+
+<div>
+    <h2>localStorage vs sessionStorage</h2>
+    <h3>localStorage</h3>
+<p>localStorage হলো পারমানেন্ট তবে যদি browser যদি close ও করেদিলেও ডাটা থাকবে।যেটা localStorage এর মাধ্যমে store করবে। </p>
+   <p>localStorage সবসময় স্থায়ীভাবে ডেটা সংরক্ষণ করা হয়</p>
+   <p>কোনো ট্যাবের জন্য কাজ করা নির্দিষ্ট ট্যাব কাজ না</p>
+   
+
+    <h3>sessionStorage</h3>
+    <p>session Storage এর মাধ্যমে store করলে মাএ session জন্য থাকবে।আর browser close করেদিলে ডাটা চলে যাবে  </p>
+    <p>একটি browser বা ট্যাব বন্ধ হয়ে গেলে ডেটা  মুছে যায়৷ </p>
+    <p>একটি নির্দিষ্ট ট্যাবের জন্য কাজ করা</p>
+</div>
+
+</section>
+
         <footer></footer>
 
         <!-- add javascript  file  -->
